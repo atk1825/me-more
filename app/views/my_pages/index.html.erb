@@ -1,2 +1,5 @@
 <%= render "shared/header" %>
 <h1>マイページ</h1>
+ <% @post.each do |post| %>
+ <%= link_to post.title, post_path(post.id)  %>
+ <% end %>
