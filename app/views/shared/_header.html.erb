@@ -1,0 +1,12 @@
+<header class="header">
+  <%= link_to 'me-more', '#', class: "title" %>
+      <% if user_signed_in? %>
+        <div class="log-out"><%= link_to 'ログアウト', destroy_user_session_path, data: {turbo_method: :delete},class:"logout" %></div>
+      <% else %>
+      <div class="auth-links">
+        <div><%= link_to 'ログイン', new_user_session_path, class: "login" %></div>
+        <div><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></div>
+      </div>
+      <% end %>
+</header>
+    
