@@ -1,16 +1,22 @@
 .header{
   height: 100px;
   width: 100vw;
-  background-color:#e1c188;
+  background-color: #e1c188;
+}
+
+.board{
+  height: 100px;
   display: flex;
   justify-content: space-between;
+  background-color: #274176;
+  margin: 0 30px;
 }
 
 .title{
 height: 100%;
 font-size: 60px;
 text-decoration: none;
-color: #274176 ;
+color: #e1c188 ;
 margin-left: 60px;
 font-weight: bold;
 }
@@ -31,17 +37,17 @@ font-weight: bold;
 
 .login{
   text-decoration: none;
-  color: #274176;
+  color: #e1c188;
   font-weight: bold;
 }
 .sign-up{
   text-decoration: none;
-  color: #274176;
+  color: #e1c188;
   font-weight: bold;
 }
 
 .logout{
   text-decoration: none;
-  color: #274176;
+  color: #e1c188;
   font-weight: bold;
 }
