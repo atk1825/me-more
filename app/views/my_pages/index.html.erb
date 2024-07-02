@@ -1,5 +1,8 @@
 <%= render "shared/header" %>
+<div class="main">
 <h1>マイページ</h1>
+<%= link_to 'アウトプット', new_post_path %>
  <% @post.each do |post| %>
  <%= link_to post.title, post_path(post.id)  %>
  <% end %>
+ </div>
