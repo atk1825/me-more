@@ -1,0 +1,9 @@
+<div>
+  <%= @post.title %>
+</div>
+<div>
+  <%= @post.content %>
+</div>
+<div id="like-btn">
+  <%= render partial: "likes/like", locals: { post: @post} %>
+</div>
