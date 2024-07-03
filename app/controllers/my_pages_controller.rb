@@ -1,5 +1,6 @@
 class MyPagesController < ApplicationController
   def index
-    @post = Post.all
+    @posts = Post.all
+    @users = User.all
   end
 end
