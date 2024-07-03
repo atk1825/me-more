@@ -1,10 +1,17 @@
 <%= render "shared/header" %>
 <div class="main">
 <h1>MyPage</h1>
-    <% if current_user.image.attached? %>
-      <%= image_tag current_user.image, class:"icon"%>
+    <% if user_signed_in?  %>
+      <% if current_user.image.attached? %>
+        <%= image_tag current_user.image, class:"icon" %>
+        <%= link_to current_user.name,  edit_user_registration_path %>
+      <%else%>
+        <%= image_tag "default.png", class:"icon"%>
+        <%= link_to current_user.name,  edit_user_registration_path %>
+      <%end%>
+    <% else %>
+      <%= image_tag "default.png", class:"icon"%>
     <% end %>
-   <%= link_to current_user.name,  edit_user_registration_path %>
 <%= link_to 'アウトプット', new_post_path %>
  <% @posts.each do |post| %>
  <%= link_to post.title, post_path(post.id)  %>
