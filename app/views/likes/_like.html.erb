@@ -1,5 +1,9 @@
 <% if user_signed_in? && post.liked_by?(current_user) %>
+<div>
   <%= link_to "保存済み", post_like_path(post.id), data: { turbo_method: :delete }, class: "post_likes", remote: true %>
+</div>
 <% else %>
+<div>
   <%= link_to "保存する", post_likes_path(post.id), data: { turbo_method: :post }, class: "post_likes", remote: true %>
+</div>
 <% end %>
