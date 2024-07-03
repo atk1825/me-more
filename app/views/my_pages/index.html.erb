@@ -1,8 +1,12 @@
 <%= render "shared/header" %>
 <div class="main">
-<h1>マイページ</h1>
+<h1>MyPage</h1>
+    <% if current_user.image.attached? %>
+      <%= image_tag current_user.image, class:"icon"%>
+    <% end %>
+   <%= link_to current_user.name,  edit_user_registration_path %>
 <%= link_to 'アウトプット', new_post_path %>
- <% @post.each do |post| %>
+ <% @posts.each do |post| %>
  <%= link_to post.title, post_path(post.id)  %>
  <% end %>
  </div>

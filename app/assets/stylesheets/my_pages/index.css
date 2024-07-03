@@ -2,3 +2,9 @@
   height: 100vh;
   background-color: #e1c188;
 }
+.icon{
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
