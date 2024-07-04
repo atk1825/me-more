@@ -13,7 +13,12 @@
         <%= image_tag "default.png", class:"icon"%>
       <% end %>
   <%= link_to 'アウトプット', new_post_path %>
-  <% @posts.each do |post| %>
-  <%= link_to post.title, post_path(post.id)  %>
+<div>
+  <% if @like_posts.present? %>
+    <% @like_posts.each do |post|%>
+      <%= link_to post.title, post_path(post.id) %>
+    <% end %>
+  <% else %>
+    <p>保存した投稿はありません</p>
   <% end %>
-  </div>
+</div>
