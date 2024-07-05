@@ -13,3 +13,7 @@
 <% other_posts = @posts.reject { |post| post.user_id == current_user.id } %>
 <% random_post = other_posts.sample %>
 <%= link_to random_post.title, post_path(random_post.id) if random_post %>
+
+<div>
+  <%= link_to 'MyPageに戻る', root_path%>
+</div>
