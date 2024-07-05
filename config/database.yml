@@ -10,6 +10,7 @@ development:
   <<: *default
   database: me_more_development
 
+test:
   <<: *default
   database: me_more_test
 

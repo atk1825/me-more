@@ -1,0 +1,15 @@
+<div>
+  タイトル：<%= @post.title %>
+</div>
+<div>
+  内容：<%= @post.content %>
+</div>
+<div>
+  投稿者：<%= @post.user.name%>
+</div>
+<div id="like-btn">
+  <%= render partial: "likes/like", locals: { post: @post} %>
+</div>
+<div>
+<%= link_to "マイページに戻る", root_path %>
+</div>

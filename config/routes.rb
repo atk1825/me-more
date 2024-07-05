@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: "my_pages#index"
-  resources :my_pages
-  resources :posts
+  root to: "users#index"
+  resources :users, only: [:index] do
+    member do
+      get :likes
+    end
+  end
+  resources :posts do
+    resources :likes, only: [:create, :destroy]
+  end
 end
