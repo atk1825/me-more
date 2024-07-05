@@ -1,8 +1,11 @@
 <div>
-  <%= @post.title %>
+  タイトル：<%= @post.title %>
 </div>
 <div>
-  <%= @post.content %>
+  内容：<%= @post.content %>
+</div>
+<div>
+  投稿者：<%= @post.user.name%>
 </div>
 <div id="like-btn">
   <%= render partial: "likes/like", locals: { post: @post} %>
