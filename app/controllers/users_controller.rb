@@ -1,8 +1,8 @@
 class UsersController < ApplicationController
   before_action :authenticate_user! 
-  
+
   def index
-    @posts = Post.all
+    @posts = current_user.posts
     @users = User.all
     if user_signed_in?
       likes(current_user)
