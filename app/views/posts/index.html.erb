@@ -1,8 +1,15 @@
-<% random_post = @posts.sample %>
-<%= link_to random_post.title, post_path(random_post.id) %>
+<% other_posts = @posts.reject { |post| post.user_id == current_user.id } %>
+<% random_post = other_posts.sample %>
+<%= link_to random_post.title, post_path(random_post.id) if random_post %>
 
-<% random_post = @posts.sample %>
-<%= link_to random_post.title, post_path(random_post.id) %>
+<% other_posts = @posts.reject { |post| post.user_id == current_user.id } %>
+<% random_post = other_posts.sample %>
+<%= link_to random_post.title, post_path(random_post.id) if random_post %>
 
-<% random_post = @posts.sample %>
-<%= link_to random_post.title, post_path(random_post.id) %>
+<% other_posts = @posts.reject { |post| post.user_id == current_user.id } %>
+<% random_post = other_posts.sample %>
+<%= link_to random_post.title, post_path(random_post.id) if random_post %>
+
+<% other_posts = @posts.reject { |post| post.user_id == current_user.id } %>
+<% random_post = other_posts.sample %>
+<%= link_to random_post.title, post_path(random_post.id) if random_post %>
