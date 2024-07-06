@@ -10,6 +10,9 @@
 <div id="like-btn">
   <%= render partial: "likes/like", locals: { post: @post} %>
 </div>
+<% if current_user == @post.user %>
+  <%= link_to '削除', post_path, data: {turbo_method: :delete} %>
+<% end %>
 <div>
 <%= link_to "マイページに戻る", root_path %>
 </div>
