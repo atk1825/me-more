@@ -2,8 +2,11 @@ class UsersController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @posts = current_user.posts
     @users = User.all
+    @posts = current_user.posts
+    @yesterday_posts = Post.yesterday
+    @three_days_later_posts = Post.three_days_later
+    @seven_days_later_posts = Post.seven_days_later
     if user_signed_in?
       likes(current_user)
     else
