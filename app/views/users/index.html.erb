@@ -19,6 +19,24 @@
   <% end %>
 </div>
 <div>
+  <h2>1日後</h2>
+  <% @yesterday_posts.each do |post| %>
+    <%= link_to post.title, post_path(post.id) %>
+  <% end %>
+</div>
+<div>
+  <h2>3日後</h2>
+  <% @three_days_later_posts.each do |post| %>
+    <%= link_to post.title, post_path(post.id) %>
+  <% end %>
+</div>
+<div>
+  <h2>7日後</h2>
+  <% @seven_days_later_posts.each do |post| %>
+    <%= link_to post.title, post_path(post.id) %>
+  <% end %>
+</div>
+<div>保存した投稿</div>
   <% if @like_posts.present? %>
     <% @like_posts.each do |post|%>
       <%= link_to post.title, post_path(post.id) %>
@@ -26,4 +44,3 @@
   <% else %>
     <p>保存した投稿はありません</p>
   <% end %>
-</div>
