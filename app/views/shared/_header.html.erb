@@ -1,6 +1,6 @@
 <header class="header">
   <div class="board">
-  <%= link_to 'me-more', '#', class: "title" %>
+  <%= link_to 'me-more', root_path, class: "title" %>
       <% if user_signed_in? %>
         <div class="log-out"><%= link_to 'ログアウト', destroy_user_session_path, data: {turbo_method: :delete},class:"logout" %></div>
       <% else %>
