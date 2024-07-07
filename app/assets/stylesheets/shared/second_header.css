@@ -1,0 +1,21 @@
+.second_header{
+  height: 100px;
+  width: 100vw;
+  background-color: #e1c188;
+}
+
+.second_board{
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  background-color: #274176;
+  margin: 0 30px;
+}
+
+.second_title{
+  height: 100%;
+  font-size: 60px;
+  text-decoration: none;
+  color: #e1c188 ;
+  font-weight: bold;
+}
