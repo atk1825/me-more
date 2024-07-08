@@ -1,0 +1,20 @@
+.wrapper{
+  position: relative;
+}
+
+.footer{
+  height: 50px;
+  width: 100vw;
+  background-color: #274176;
+  position: absolute;
+  bottom: 0;
+}
+
+.footer_name{
+  font-size: 20px;
+  color: #e1c188;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
