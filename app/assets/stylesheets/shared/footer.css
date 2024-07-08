@@ -3,8 +3,8 @@
 }
 
 .footer{
-  height: 50px;
-  width: 100vw;
+  height: 40px;
+  width: 100%;
   background-color: #274176;
   position: absolute;
   bottom: 0;
@@ -16,5 +16,5 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 10px;
+  margin-top: 5px;
 }
