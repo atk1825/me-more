@@ -1,3 +1,9 @@
+.devise_main{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
 .field{
   height: 100px;
   padding-top: 40px;
