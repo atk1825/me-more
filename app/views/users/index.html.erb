@@ -3,38 +3,57 @@
   <div class="h1">MyPage</div>
       <% if user_signed_in?  %>
         <% if current_user.image.attached? %>
+         <div class="icon_area">
           <%= image_tag current_user.image, class:"icon" %>
-          <%= link_to current_user.name,  edit_user_registration_path %>
+          <%= link_to current_user.name,  edit_user_registration_path, class:"user_name"%>
+        </div>
         <%else%>
-          <%= image_tag "default.png", class:"icon"%>
-          <%= link_to current_user.name,  edit_user_registration_path %>
-        <%end%>
+          <div class="icon_area">
+            <%= image_tag "default.png", class:"icon"%>
+            <%= link_to current_user.name,  edit_user_registration_path, class:"user_name" %>
+          </div>
+      <%end%>
       <% else %>
-        <%= image_tag "default.png", class:"icon"%>
+        <div class="icon_area">
+          <%= image_tag "default.png", class:"icon"%>
+        </div>
       <% end %>
-  <%= link_to 'アウトプット', new_post_path %>
-<div>
-  <% @posts.each do |post|%>
-    <%= link_to post.title, post_path(post.id) %>
-  <% end %>
+<div class="output_link">
+  <%= link_to 'アウトプットする', new_post_path, class:"output__link" %>
 </div>
-<div>
-  <h2>1日後</h2>
-  <% @yesterday_posts.each do |post| %>
-    <%= link_to post.title, post_path(post.id) %>
-  <% end %>
-</div>
-<div>
-  <h2>3日後</h2>
-  <% @three_days_later_posts.each do |post| %>
-    <%= link_to post.title, post_path(post.id) %>
-  <% end %>
-</div>
-<div>
-  <h2>7日後</h2>
-  <% @seven_days_later_posts.each do |post| %>
-    <%= link_to post.title, post_path(post.id) %>
-  <% end %>
+<div class="post_all">
+  <div class="post_area">
+    <div class="h2">今日の投稿</div>
+    <% @posts.each do |post|%>
+      <div class="post_content">
+        <%= link_to post.title, post_path(post.id), class:"post_title" %>
+      </div>
+    <% end %>
+  </div>
+  <div class="post_area">
+    <div class="h2">1日後</div>
+    <% @yesterday_posts.each do |post| %>
+        <div class="post_content">
+          <%= link_to post.title, post_path(post.id), class:"post_title" %>
+        </div>
+    <% end %>
+  </div>
+  <div class="post_area">
+    <div class="h2">3日後</div>
+      <% @three_days_later_posts.each do |post| %>
+        <div class="post_content">
+          <%= link_to post.title, post_path(post.id), class:"post_title" %>
+        </div>
+      <% end %>
+  </div>
+  <div class="post_area">
+    <div class="h2">7日後</div>
+      <% @seven_days_later_posts.each do |post| %>
+        <div class="post_content">
+          <%= link_to post.title, post_path(post.id), class:"post_title" %>
+        </div>
+      <% end %>
+  </div>
 </div>
 <div>保存した投稿</div>
   <% if @like_posts.present? %>

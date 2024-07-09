@@ -1,6 +1,17 @@
-<%= form_with model: @post, local: true do |f| %>
-  <%= f.text_field :title %>
-  <%= f.text_area :content %>
-  <%= f.collection_select(:genre_id, Genre.all, :id, :name, {}, {class:"genre-select"})%>
-  <%= f.submit '投稿する' %>
-<% end %>
+<%= render "shared/second_header"%>
+<div class="main">
+  <%= form_with model: @post, local: true do |f| %>
+    <div class="post_page">
+      <label class="form_title">タイトル
+        <%= f.text_field :title, class: "form__title" %>
+      </label>
+      <label class="form_content">内容
+        <%= f.text_area :content, class: "form__content"%>
+      </label>
+      <label class="form_genre">ジャンル
+        <%= f.collection_select(:genre_id, Genre.all, :id, :name, {}, {class:"genre-select"})%>
+      </label>
+        <%= f.submit '投稿する', class: "form_btn" %>
+    </div>
+  <% end %>
+</div>
