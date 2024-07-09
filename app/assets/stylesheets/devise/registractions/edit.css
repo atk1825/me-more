@@ -1,0 +1,54 @@
+.user_edit_main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 40px;
+  color: #274176;
+  font-weight: bold;
+}
+
+.edit_field{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 350px;
+  padding-top: 10px;
+}
+
+.edit__field{
+  padding-left: 5px;
+}
+
+.edit___field{
+  padding-left: 3px;
+}
+
+.edit_actions{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.edit_action{
+  margin-top: 15px;
+}
+
+.edit__action{
+  width: 80px;
+  height: 30px;
+  color: #274176;
+  font-weight: bold;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.edit__action_delete{
+  width: 80px;
+  height: 30px;
+  color: darkred;
+  font-weight: bold;
+  font-size: 15px;
+  text-decoration: none;
+}
