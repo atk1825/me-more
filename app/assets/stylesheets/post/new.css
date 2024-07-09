@@ -47,11 +47,10 @@
 }
 
 .form_btn{
-  height: 50px;
+  height: 40px;
   width: 100px;
   margin-top: 50px;
   color: #274176;
   font-size: 18px;
   font-weight: bold;
-  background-color: antiquewhite;
 }
