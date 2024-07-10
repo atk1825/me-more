@@ -10,6 +10,9 @@
 <div>
   投稿者：<%= @post.user.name%>
 </div>
+<div>
+  投稿日：<%= l @post.created_at%>
+  </div>
 <div id="like-btn">
   <%= render partial: "likes/like", locals: { post: @post} %>
 </div>
