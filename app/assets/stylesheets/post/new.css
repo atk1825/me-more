@@ -16,6 +16,7 @@
 
 .form__title{
   width: 300px;
+  font-weight: normal;
 }
 
 .form_content{
@@ -30,6 +31,7 @@
 .form__content{
   height: 350px;
   width: 300px;
+  font-weight: normal;
 }
 
 .form_genre{
@@ -42,8 +44,9 @@
 }
 
 .genre-select{
+  height: 35px;
   width: 300px;
-
+  font-weight: normal;
 }
 
 .form_btn{
