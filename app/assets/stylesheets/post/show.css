@@ -1,0 +1,59 @@
+.show_main{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: #274176;
+  font-weight: bold;
+  padding-top: 45px;
+}
+
+.show_box{
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  padding-top: 18px;
+}
+
+.show_title{
+  font-size: large;
+  background-color: #274176;
+  color: #e1c188;
+  padding-left: 5px;
+}
+
+.show__title{
+  padding-left: 5px;
+}
+.show_content{
+  height: 250px;
+  width: 400px;
+  overflow: scroll;
+  overflow-wrap: break-word;
+  padding: 0 5px;
+}
+.show_name{
+  padding-left: 5px;
+}
+
+.show_created{
+  padding-left: 5px;
+}
+
+.show_btn{
+  margin-top: 10px;
+}
+
+.show__btn{
+  text-decoration: none;
+  color: #274176;
+}
+
+.show___btn{
+  text-decoration: none;
+  color: darkred;
+}
+
+.post_likes{
+  text-decoration: none;
+  color: #274176;
+}

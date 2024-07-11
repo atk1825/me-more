@@ -1,24 +1,48 @@
 <%= render "shared/second_header"%>
 <div class="main">
-
-<div>
-  タイトル：<%= @post.title %>
-</div>
-<div>
-  内容：<%= @post.content %>
-</div>
-<div>
-  投稿者：<%= @post.user.name%>
-</div>
-<div>
-  投稿日：<%= l @post.created_at%>
+  <div class="show_main">
+    <div class="show_box">
+      <div class="show_title">
+        タイトル
+      </div>
+      <div class="show__title">
+        <%= @post.title%>
+      </div>
+    </div>
+    <div class="show_box">
+      <div class="show_title">
+        内容
+      </div>
+      <div class="show_content">
+        <%= @post.content %>
+      </div>
+    </div>
+    <div class="show_box">
+      <div class="show_title">
+        投稿者
+      </div>
+      <div class="show_name">
+        <%= @post.user.name %>
+      </div>
+    </div>
+    <div class="show_box">
+      <div class="show_title">
+        投稿日
+      </div>
+      <div class="show_created" >
+        <%= l @post.created_at %>
+      </div>
+    </div>
+    <div id="like-btn", class="show_btn">
+      <%= render partial: "likes/like", locals: { post: @post} %>
+    </div>
+    <% if current_user == @post.user %>
+      <div class="show_btn">
+        <%= link_to '削除', post_path, data: {turbo_method: :delete}, class:"show___btn" %>
+      </div>
+    <% end %>
+    <div class="show_btn">
+      <%= link_to "マイページに戻る", root_path, class:"show__btn" %>
+    </div>
   </div>
-<div id="like-btn">
-  <%= render partial: "likes/like", locals: { post: @post} %>
-</div>
-<% if current_user == @post.user %>
-  <%= link_to '削除', post_path, data: {turbo_method: :delete} %>
-<% end %>
-<div>
-<%= link_to "マイページに戻る", root_path %>
 </div>
