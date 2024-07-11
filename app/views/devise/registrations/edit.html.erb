@@ -1,60 +1,61 @@
 <%= render "shared/second_header"%>
 <div class="main">
-
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+  <div class="user_edit_main">
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
+  <div class="edit_field">
+    <%= f.label :名前,class:"edit__field" %>
+    <%= f.text_field :name, autofocus: true, autocomplete: "name",class:"edit___field" %>
   </div>
 
-    <div class="field">
-    <%= f.label :image %><br />
+  <div class="edit_field">
+    <%= f.label :アイコン,class:"edit__field" %>
     <%= f.file_field :image %>
   </div>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  <div class="edit_field">
+    <%= f.label :メールアドレス,class:"edit__field" %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email",class:"edit___field" %>
   </div>
 
-  <div class="field">
-    <%= f.label :age %><br />
-    <%= f.number_field :age, autofocus: true, autocomplete: "age" %>
+  <div class="edit_field">
+    <%= f.label :年齢,class:"edit__field" %>
+    <%= f.number_field :age, autofocus: true, autocomplete: "age",class:"edit___field" %>
   </div>
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-    <% if @minimum_password_length %>
-      <br />
-      <em><%= @minimum_password_length %> characters minimum</em>
-    <% end %>
+  <div class="edit_field">
+    <%= f.label :変更後のパスワード,class:"edit__field" %>
+    <%= f.password_field :password, autocomplete: "new-password", placeholder:"半角英数字6文字以上で入力してください",class:"edit___field" %>
   </div>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+  <div class="edit_field">
+    <%= f.label :パスワード再入力,class:"edit__field" %>
+    <%= f.password_field :password_confirmation, autocomplete: "new-password",class:"edit___field" %>
   </div>
 
-  <div class="field">
-    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-    <%= f.password_field :current_password, autocomplete: "current-password" %>
+  <div class="edit_field">
+    <%= f.label :変更前のパスワード,class:"edit__field" %>
+    <%= f.password_field :current_password, autocomplete: "current-password",class:"edit___field" %>
   </div>
 
-  <div class="actions">
-    <%= f.submit "Update" %>
+<div class="edit_actions">
+  <div class="edit_action">
+    <%= f.submit "更新", class:"edit__action" %>
   </div>
 <% end %>
 
 
-<div> <%= button_to "アカウント削除", registration_path(resource_name), data: { confirm: "Are you sure?", turbo_confirm: "アカウントを削除します。よろしいですか" }, method: :delete %></div>
+  <div class="edit_action">
+    <%= button_to "削除", registration_path(resource_name), data: { confirm: "Are you sure?", turbo_confirm: "アカウントを削除します。よろしいですか" }, method: :delete, class:"edit__action_delete" %>
+  </div>
 
-<%= link_to "戻る", :back %>
+  <div class="edit_action">
+    <%= link_to "戻る", :back, class:"edit__action" %>
+  </div>
+</div>

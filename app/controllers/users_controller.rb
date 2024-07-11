@@ -4,9 +4,9 @@ class UsersController < ApplicationController
   def index
     @users = User.all
     @posts = current_user.posts.order(created_at: :desc)
-    @yesterday_posts = Post.yesterday.order(created_at: :desc)
-    @three_days_later_posts = Post.three_days_later.order(created_at: :desc)
-    @seven_days_later_posts = Post.seven_days_later.order(created_at: :desc)
+    @yesterday_posts = current_user.posts.yesterday(current_user.id).order(created_at: :desc)
+    @three_days_later_posts = current_user.posts.three_days_later(current_user.id).order(created_at: :desc)
+    @seven_days_later_posts = current_user.posts.seven_days_later(current_user.id).order(created_at: :desc)
     if user_signed_in?
       likes(current_user)
     else
