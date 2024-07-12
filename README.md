@@ -27,7 +27,12 @@ https://me-more.onrender.com/
  学生や社会人が効率よく学習することができるアプリケーション
 
 # 実装した機能についての画像やGIFおよびその説明
+
 # 実装予定の機能
+* 投稿機能に画像を添付できるようにする
+* プレビューもできるようにする
+* チャットGPTを使い、アウトプットの内容を問題形式で表示できるようにする
+
 # データベース設計
 [![Image from Gyazo](https://i.gyazo.com/36c73673f2c9e1e22fd21badc06acfbe.png)](https://gyazo.com/36c73673f2c9e1e22fd21badc06acfbe)
 
