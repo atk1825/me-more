@@ -23,12 +23,17 @@
 # 実装した機能についての画像やGIFおよびその説明
 # 実装予定の機能
 # データベース設計
+[![Image from Gyazo](https://i.gyazo.com/36c73673f2c9e1e22fd21badc06acfbe.png)](https://gyazo.com/36c73673f2c9e1e22fd21badc06acfbe)
+
 # 画面遷移図
+[![Image from Gyazo](https://i.gyazo.com/c32b246fee8ec6da2d17e20173811c57.png)](https://gyazo.com/c32b246fee8ec6da2d17e20173811c57)
 # 開発環境
 # ローカルでの動作方法
 # 工夫したポイント
 # 改善点
 # 製作時間
+
+
 
 ## users
 | Column             | Type      | Options                   |
@@ -40,6 +45,7 @@
 
 ### Association
 - has_many :posts
+- has_many :likes
 
 
 ## posts
@@ -52,3 +58,15 @@
 
 ### Association
 - belongs_to :user
+- has_many :likes
+
+
+## likes
+| Column  | Type       | Options
+| ------- | ---------- | ------------------------------ |
+| user_id | references | null: false, foreign_key: true |
+| post_id | references | null: false, foreign_key: true |
+
+### Association
+- belongs_to :user
+- belongs_to :post
