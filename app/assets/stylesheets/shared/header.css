@@ -13,7 +13,6 @@
 }
 
 .title{
-height: 100%;
 font-size: 60px;
 text-decoration: none;
 color: #e1c188 ;
@@ -22,13 +21,11 @@ font-weight: bold;
 }
 
 .log-out{
-  height: 100%;
   margin: 30px 100px;
   font-size: 25px;
 }
 
 .auth-links{
-  height: 100%;
   display: flex;
   gap: 30px;
   font-size: 25px;
