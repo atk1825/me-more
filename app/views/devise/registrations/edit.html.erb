@@ -5,22 +5,22 @@
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
-  <div class="edit_field">
+  <div class="edit_new_field">
     <%= f.label :名前,class:"edit__field" %>
     <%= f.text_field :name, autofocus: true, autocomplete: "name",class:"edit___field" %>
   </div>
 
-  <div class="edit_field">
+  <div class="edit_new_field">
     <%= f.label :アイコン,class:"edit__field" %>
     <%= f.file_field :image %>
   </div>
 
-  <div class="edit_field">
+  <div class="edit_new_field">
     <%= f.label :メールアドレス,class:"edit__field" %>
     <%= f.email_field :email, autofocus: true, autocomplete: "email",class:"edit___field" %>
   </div>
 
-  <div class="edit_field">
+  <div class="edit_new_field">
     <%= f.label :年齢,class:"edit__field" %>
     <%= f.number_field :age, autofocus: true, autocomplete: "age",class:"edit___field" %>
   </div>
@@ -29,17 +29,17 @@
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>
 
-  <div class="edit_field">
+  <div class="edit_new_field">
     <%= f.label :変更後のパスワード,class:"edit__field" %>
     <%= f.password_field :password, autocomplete: "new-password", placeholder:"半角英数字6文字以上で入力してください",class:"edit___field" %>
   </div>
 
-  <div class="edit_field">
+  <div class="edit_new_field">
     <%= f.label :パスワード再入力,class:"edit__field" %>
     <%= f.password_field :password_confirmation, autocomplete: "new-password",class:"edit___field" %>
   </div>
 
-  <div class="edit_field">
+  <div class="edit_new_field">
     <%= f.label :変更前のパスワード,class:"edit__field" %>
     <%= f.password_field :current_password, autocomplete: "current-password",class:"edit___field" %>
   </div>
