@@ -43,11 +43,6 @@
   margin-top: 10px;
 }
 
-.show__btn{
-  text-decoration: none;
-  color: #274176;
-}
-
 .show___btn{
   text-decoration: none;
   color: darkred;
@@ -56,4 +51,14 @@
 .post_likes{
   text-decoration: none;
   color: #274176;
+}
+
+/******
+shared
+*******/
+
+.show_index_btn{
+  text-decoration: none;
+  color: #274176;
+  font-weight: bold;
 }
