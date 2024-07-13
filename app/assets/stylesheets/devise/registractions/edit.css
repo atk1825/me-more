@@ -8,7 +8,7 @@
   font-weight: bold;
 }
 
-.edit_field{
+.edit_new_field{
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -51,4 +51,10 @@
   font-weight: bold;
   font-size: 15px;
   text-decoration: none;
+}
+
+.devise_h2{
+  font-size: large;
+  color: #274176;
+  font-weight: bold;
 }
