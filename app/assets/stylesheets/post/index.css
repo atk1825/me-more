@@ -1,0 +1,43 @@
+.post_index_main{
+  display: flex;
+  justify-content: space-around;
+}
+
+.post_indexes{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 100px;
+}
+
+.post_index{
+  width: 300px;
+  margin: 50px 0;
+}
+
+.post_index_title{
+  width: 300px;
+  background-color: #274176;
+  color: #e1c188;
+  font-weight: bold;
+  padding-left: 5px;
+}
+.post_index_content{
+  overflow: hidden;
+  height: 50px;
+  width: 300px;
+  color: #274176;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.post_index_link{
+  text-decoration: none;
+  color: #274176;
+  font-weight: bold;
+}
+
+.back_btn{
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
