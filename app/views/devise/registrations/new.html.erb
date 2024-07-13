@@ -8,33 +8,33 @@
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="edit_new_field">
-    <%= f.label :ニックネーム %>
-    <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
+    <%= f.label :ニックネーム ,class:"edit__new__field" %>
+    <%= f.text_field :name, autofocus: true, autocomplete: "name", class:"edit___new___field" %>
   </div>
 
   <div class="edit_new_field">
-    <%= f.label :アイコン %>
+    <%= f.label :アイコン,class:"edit__new__field" %>
     <%= f.file_field :image %>
   </div>
   
   <div class="edit_new_field">
-    <%= f.label :メールアドレス %>
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= f.label :メールアドレス,class:"edit__new__field" %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"edit___new___field" %>
   </div>
 
   <div class="edit_new_field">
-    <%= f.label :年齢 %>
-    <%= f.number_field :age, autofocus: true, autocomplete: "age" %>
+    <%= f.label :年齢,class:"edit__new__field" %>
+    <%= f.number_field :age, autofocus: true, autocomplete: "age", class:"edit___new___field" %>
   </div>
 
   <div class="edit_new_field">
-    <%= f.label :パスワード %>
-    <%= f.password_field :password, autocomplete: "new-password", placeholder:"英数字６文字以上" %>
+    <%= f.label :パスワード,class:"edit__new__field" %>
+    <%= f.password_field :password, autocomplete: "new-password", placeholder:"英数字６文字以上", class:"edit___new___field" %>
   </div>
 
   <div class="edit_new_field">
-    <%= f.label :確認用パスワード %>
-    <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder:"パスワード再入力" %>
+    <%= f.label :確認用パスワード,class:"edit__new__field" %>
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder:"パスワード再入力", class:"edit___new___field" %>
   </div>
 
   <div class="actions">
