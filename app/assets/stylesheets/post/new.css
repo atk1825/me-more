@@ -3,12 +3,13 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding-bottom: 100px;
 }
 
 .form_title{
   display: flex;
   flex-direction: column;
-  margin-top: 40px;
+  margin-top: 20px;
   color: #274176;
   font-size: 18px;
   font-weight: bold;
@@ -22,7 +23,7 @@
 .form_content{
   display: flex;
   flex-direction: column;
-  margin-top: 30px;
+  margin-top: 20px;
   color: #274176;
   font-size: 18px;
   font-weight: bold;
@@ -37,7 +38,7 @@
 .form_genre{
   display: flex;
   flex-direction: column;
-  margin-top: 40px;
+  margin-top: 20px;
   color: #274176;
   font-size: 18px;
   font-weight: bold;
