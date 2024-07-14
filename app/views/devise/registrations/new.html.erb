@@ -5,7 +5,6 @@
 <h2 class="devise_h2">新規登録</h2>
 
 <%= form_with model: @user, url: user_registration_path, local: true do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="edit_new_field">
     <%= f.label :ニックネーム ,class:"edit__new__field" %>
