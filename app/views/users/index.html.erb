@@ -55,11 +55,15 @@
       <% end %>
   </div>
 </div>
-<div>保存した投稿</div>
+<div class="other_post">
+ <div class="others_post_title">保存した投稿</div>
   <% if @like_posts.present? %>
     <% @like_posts.each do |post|%>
-      <%= link_to post.title, post_path(post.id) %>
+      <div class="other_post_contents">
+        <%= link_to post.title, post_path(post.id), class:"other_post_content" %>
+      </div>
     <% end %>
   <% else %>
     <p>保存した投稿はありません</p>
   <% end %>
+</div>
