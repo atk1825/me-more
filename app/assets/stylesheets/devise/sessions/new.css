@@ -6,7 +6,7 @@
 
 .field{
   height: 100px;
-  padding-top: 40px;
+  padding-top: 60px;
 }
 
 .f_label{
@@ -27,8 +27,7 @@
 
 .devise_shared{
   height: 40px;
-  padding-top: 15px;
-  margin-bottom: 50px;
+  margin-bottom: 150px;
 }
 
 .devise_links{
