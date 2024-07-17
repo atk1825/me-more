@@ -5,6 +5,9 @@
       <label class="form_title">タイトル
         <%= f.text_field :title, class: "form__title" %>
       </label>
+      <label>
+        <%= f.file_field :image %>
+      </label>
       <label class="form_content">内容
         <%= f.text_area :content, class: "form__content"%>
       </label>
