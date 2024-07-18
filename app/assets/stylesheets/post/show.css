@@ -7,6 +7,10 @@
   padding-top: 45px;
 }
 
+.show_image{
+  display: flex;
+}
+
 .show_box{
   display: flex;
   flex-direction: column;
@@ -14,12 +18,19 @@
   padding-top: 18px;
 }
 
+.show__box{
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  margin-right: 10px;
+}
 .show_title{
   font-size: large;
   background-color: #274176;
   color: #e1c188;
   padding-left: 5px;
 }
+
 
 .show__title{
   padding-left: 5px;
