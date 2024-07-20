@@ -1,21 +1,30 @@
 <%= render "shared/second_header"%>
 <div class="mains">
   <div class="show_main">
-    <div class="show_image">
-      <div class="show__box">
-        <div class="show_title">
-          タイトル
+      <% if @post.image.attached?%>
+        <div class="show_image">
+          <div class="show__box">
+            <div class="show_title">
+            タイトル
+            </div>
+            <div class="show__title">
+            <%= @post.title%>
+            </div>
+          </div>
+          <div>
+            <%= image_tag @post.image.variant(resize: '200x200') %>
+          </div>
         </div>
-        <div class="show__title">
-          <%= @post.title%>
+      <% else %>
+        <div class="show_box">
+          <div class="show_title">
+            タイトル
+          </div>
+          <div class="show__title">
+            <%= @post.title%>
+          </div>
         </div>
-      </div>
-        <div>
-          <% if @post.image.attached?%>
-            <%= image_tag @post.image.variant(resize: '250x250') %>
-          <% end %>
-        </div>
-      </div>
+      <% end %>
       <div class="show_box">
         <div class="show_title">
           内容
