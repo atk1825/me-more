@@ -20,3 +20,18 @@
   color: #e1c188 ;
   font-weight: bold;
 }
+
+@media (max-width: 599px){
+  .second_header{
+    height: 50px;
+  }
+
+  .second_board{
+    height: 50px;
+  }
+  
+  .second_title{
+    font-size: 30px;
+    margin-left: 10px;
+  }
+}
