@@ -103,3 +103,33 @@
 .other_post_content{
   text-decoration: none;
 }
+
+/*スマホ表示*/
+@media (max-width: 599px){
+  .h1{
+    height: 20px;
+    font-size: large;
+    padding-top: 10px;
+  }
+  
+  .icon{
+    height: 100px;
+    width: 100px;
+  }
+
+  .output_link{
+    margin-top: 0px;
+  }
+  .post_all{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  
+  .post_area{
+    height: 150px;
+    width: 90%;
+    margin-bottom: 10px;
+  }
+}
