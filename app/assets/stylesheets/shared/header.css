@@ -48,3 +48,23 @@ font-weight: bold;
   color: #e1c188;
   font-weight: bold;
 }
+
+@media (max-width: 599px){
+  .header{
+    height: 50px;
+  }
+
+  .board{
+    height: 50px;
+  }
+  
+  .title{
+    font-size: 30px;
+    margin-left: 10px;
+  }
+
+  .log-out{
+    font-size: 15px;
+    margin: 15px 10px ;
+  }
+}
