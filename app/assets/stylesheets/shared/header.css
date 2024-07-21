@@ -59,12 +59,13 @@ font-weight: bold;
   }
   
   .title{
+    height: 50%;
     font-size: 30px;
     margin-left: 10px;
   }
 
   .log-out{
     font-size: 15px;
-    margin: 15px 10px ;
+    margin: 15px 10px;
   }
 }
