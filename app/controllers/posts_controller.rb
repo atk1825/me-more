@@ -1,6 +1,10 @@
 class PostsController < ApplicationController
   require 'openai'
 
+  def initialize # rubocop:disable Lint/MissingSuper
+    @client = OpenAI::Client.new(api_key: ENV['OPENAI_API_KEY'])
+  end
+
   def index
     @posts = Post.all
   end
@@ -37,17 +41,14 @@ class PostsController < ApplicationController
   end
 
   def generate_problem(content)
-    client = OpenAI::Client.new(api_key: ENV['OPENAI_API_KEY'])
-    response = client.completions(
-      parameters: {
-        model: 'gpt-3.5',
-        messages: [
-          { role: 'system', content: 'You are a helpful assistant.' },
-          { role: 'user', content: "Generate a problem based on the following content: #{content}" }
-        ],
-        max_tokens: 100
-      }
-    )
+    response = @client.chat(parameters: {
+                              model: 'gpt-3.5-turbo',
+                              messages: [
+                                { role: 'system', content: 'You are a helpful assistant.' },
+                                { role: 'user', content: "Generate a problem based on the following content: #{content}" }
+                              ],
+                              max_tokens: 100
+                            })
     response.dig('choices', 0, 'message', 'content').strip
   end
 end
