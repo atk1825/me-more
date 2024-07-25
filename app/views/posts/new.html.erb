@@ -9,7 +9,7 @@
         <%= f.file_field :image %>
       </label>
       <label class="form_content">内容
-        <%= f.text_area :content, class: "form__content"%>
+        <%= f.text_area :detail, class: "form__content"%>
       </label>
       <label class="form_genre">ジャンル
         <%= f.collection_select(:genre_id, Genre.all, :id, :name, {}, {class:"genre-select"})%>

@@ -24,7 +24,7 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
-    @problem = generate_problem(@post.content)
+    @problem = generate_problem(@post.detail)
   end
 
   def destroy
@@ -37,15 +37,15 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:title, :content, :genre_id, :image).merge(user_id: current_user.id)
+    params.require(:post).permit(:title, :detail, :genre_id, :image).merge(user_id: current_user.id)
   end
 
-  def generate_problem(content)
+  def generate_problem(detail)
     response = @client.chat(parameters: {
                               model: 'gpt-3.5-turbo',
                               messages: [
                                 { role: 'system', content: 'You are a helpful assistant.' },
-                                { role: 'user', content: "Generate a problem based on the following content: #{content}" }
+                                { role: 'user', content: "Generate a problem based on the following content: #{detail}" }
                               ],
                               max_tokens: 100
                             })
