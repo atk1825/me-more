@@ -49,9 +49,9 @@
           <%= l @post.created_at %>
         </div>
       </div>
-      <p>
-        <%= @problem %>
-      </p>
+    <div id="problem">
+      問題を表示
+    </div>
       <div id="like-btn", class="show_btn">
         <%= render partial: "likes/like", locals: { post: @post} %>
       </div>
