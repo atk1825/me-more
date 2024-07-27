@@ -13,6 +13,7 @@
   color: #274176;
   font-size: 18px;
   font-weight: bold;
+  margin-bottom: 3px;
 }
 
 .form__title{
@@ -57,4 +58,12 @@
   color: #274176;
   font-size: 18px;
   font-weight: bold;
+}
+/*スマホ表示*/
+
+@media (max-width: 599px){
+  .form__content{
+    height: 200px;
+  }
+
 }
