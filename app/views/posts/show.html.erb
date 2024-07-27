@@ -30,7 +30,7 @@
           内容
         </div>
         <div class="show_content">
-          <%= @post.detail %>
+          <%= @post.content %>
         </div>
       </div>
       <div class="show_box">
@@ -49,9 +49,6 @@
           <%= l @post.created_at %>
         </div>
       </div>
-    <div id="problem">
-      問題を表示
-    </div>
       <div id="like-btn", class="show_btn">
         <%= render partial: "likes/like", locals: { post: @post} %>
       </div>

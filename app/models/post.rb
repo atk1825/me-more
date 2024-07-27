@@ -1,6 +1,6 @@
 class Post < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
-  validates :title, :detail, presence: true
+  validates :title, :content, presence: true
   validates :genre_id, numericality: { other_than: 1 }
 
   belongs_to :genre

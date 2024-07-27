@@ -50,7 +50,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_07_03_073417) do
 
   create_table "posts", charset: "utf8mb4", force: :cascade do |t|
     t.string "title", null: false
-    t.text "detail", null: false
+    t.text "content", null: false
     t.integer "genre_id", null: false
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
