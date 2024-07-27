@@ -50,5 +50,8 @@
     justify-content: center;
     flex-direction: column;
   }
-  
+
+  .post_indexes{
+    margin-top: 20px;
+  }
 }
