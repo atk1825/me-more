@@ -52,6 +52,14 @@
   }
 
   .post_indexes{
+    margin-top: 10px;
+  }
+  
+  .post_index{
+    margin: 20px 0;
+  }
+
+  .back_btn{
     margin-top: 20px;
   }
 }
