@@ -74,3 +74,16 @@ shared
   font-weight: bold;
   margin-bottom: 100px;
 }
+
+
+/*スマホ表示*/
+
+@media (max-width: 599px){
+  .show_box{
+    width: 300px;
+  }
+
+  .show_content{
+    width: 300px;
+  }
+}
