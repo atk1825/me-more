@@ -30,7 +30,7 @@
           内容
         </div>
         <div class="show_content">
-          <%= @post.content %>
+          <%= @problem %>
         </div>
       </div>
       <div class="show_box">
@@ -48,6 +48,9 @@
         <div class="show_created" >
           <%= l @post.created_at %>
         </div>
+      </div>
+      <div>
+        <%= @post.content %>
       </div>
       <div id="like-btn", class="show_btn">
         <%= render partial: "likes/like", locals: { post: @post} %>
