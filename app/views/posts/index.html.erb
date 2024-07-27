@@ -1,70 +1,49 @@
 <%= render "shared/second_header"%>
 <div class="mains">
-<% unless @post == nil %> 
+<% other_posts = @posts.reject { |post| post.user_id == current_user.id } %>
+<% if other_posts.any? %>
   <div class="post_index_main">
     <div class="post_indexes">
-      <div class="post_index"> 
-        <div class="post_index_title">
-          <% other_posts = @posts.reject { |post| post.user_id == current_user.id } %>
+      <% 2.times do %>
+        <div class="post_index">
           <% random_post = other_posts.sample %>
-          <%= random_post.title %>
+          <div class="post_index_title">
+            <%= random_post.title %>
+          </div>
+          <div class="post_index_content">
+            <%= random_post.content %>
+          </div>
+          <div>
+            <%= link_to "詳細を見る", post_path(random_post.id), class: "post_index_link" if random_post %>
+          </div>
         </div>
-        <div class="post_index_content">
-          <%= random_post.content %>
-        </div>
-        <div>
-          <%= link_to "詳細を見る",  post_path(random_post.id), class:"post_index_link" if random_post %>
-        </div>
-      </div>
-      <div class="post_index">
-        <div class="post_index_title">
-          <% other_posts = @posts.reject { |post| post.user_id == current_user.id } %>
-          <% random_post = other_posts.sample %>
-          <%= random_post.title %>
-        </div>
-        <div class="post_index_content">
-          <%= random_post.content %>
-        </div>
-        <div>
-          <%= link_to "詳細を見る",  post_path(random_post.id), class:"post_index_link" if random_post %>
-        </div>
-      </div>
+      <% end %>
     </div>
     <div class="post_indexes">
-      <div class="post_index">
-        <div class="post_index_title">
-          <% other_posts = @posts.reject { |post| post.user_id == current_user.id } %>
+      <% 2.times do %>
+        <div class="post_index">
           <% random_post = other_posts.sample %>
-          <%= random_post.title %>
+          <div class="post_index_title">
+            <%= random_post.title %>
+          </div>
+          <div class="post_index_content">
+            <%= random_post.content %>
+          </div>
+          <div>
+            <%= link_to "詳細を見る", post_path(random_post.id), class: "post_index_link" if random_post %>
+          </div>
         </div>
-        <div class="post_index_content">
-          <%= random_post.content %>
-        </div>
-        <div>
-          <%= link_to "詳細を見る",  post_path(random_post.id), class:"post_index_link" if random_post %>
-        </div>
-      </div>
-      <div class="post_index">
-        <div class="post_index_title">
-          <% other_posts = @posts.reject { |post| post.user_id == current_user.id } %>
-          <% random_post = other_posts.sample %>
-          <%= random_post.title %>
-        </div>
-        <div class="post_index_content">
-          <%= random_post.content %>
-        </div>
-        <div>
-          <%= link_to "詳細を見る",  post_path(random_post.id), class:"post_index_link" if random_post %>
-        </div>
-      </div>
-    </div> 
+      <% end %>
+    </div>
   </div>
-  <div class="back_btn"> 
-      <%= link_to 'マイページに戻る', root_path, class:"show_index_btn" %>
+  <div class="back_btn">
+    <%= link_to 'マイページに戻る', root_path, class: "show_index_btn" %>
   </div>
 <% else %>
+  <div class="post_index_content">
+    他人のアウトプットはありません
+  </div>
   <div class="back_btn">
-    <%= link_to 'マイページに戻る', root_path, class:"show_index_btn" %>
+    <%= link_to 'マイページに戻る', root_path, class: "show_index_btn" %>
   </div>
 <% end %>
- 
