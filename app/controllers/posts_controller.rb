@@ -42,7 +42,7 @@ class PostsController < ApplicationController
                               model: 'gpt-3.5-turbo',
                               messages: [
                                 { role: 'system', content: 'You are a helpful assistant.' },
-                                { role: 'user', content: "小学生向けに以下の内容に基づいた問題を作ってください。ただし問題の答えは提示しないでください: #{content}" }
+                                { role: 'user', content: "以下の内容が答えになるような問題を作成してください。ただし問題の答えは提示しないでください: #{content}" }
                               ],
                               max_tokens: 200
                             })
