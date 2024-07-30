@@ -8,5 +8,8 @@ Rails.application.routes.draw do
   end
   resources :posts do
     resources :likes, only: [:create, :destroy]
+    member do
+      get "problem"
+    end
   end
 end

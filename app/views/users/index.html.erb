@@ -34,7 +34,7 @@
     <div class="h2">1日後</div>
     <% @yesterday_posts.each do |post| %>
         <div class="post_content">
-          <%= link_to post.title, post_path(post.id), class:"post_title" %>
+        <%= link_to post.title, problem_post_path(post.id), class:"post_title" %>
         </div>
     <% end %>
   </div>
@@ -42,7 +42,7 @@
     <div class="h2">3日後</div>
       <% @three_days_later_posts.each do |post| %>
         <div class="post_content">
-          <%= link_to post.title, post_path(post.id), class:"post_title" %>
+        <%= link_to post.title, problem_post_path(post.id), class:"post_title" %>
         </div>
       <% end %>
   </div>
@@ -50,7 +50,7 @@
     <div class="h2">7日後</div>
       <% @seven_days_later_posts.each do |post| %>
         <div class="post_content">
-          <%= link_to post.title, post_path(post.id), class:"post_title" %>
+        <%= link_to post.title, problem_post_path(post.id), class:"post_title" %>
         </div>
       <% end %>
   </div>

@@ -27,36 +27,15 @@
       <% end %>
       <div class="show_box">
         <div class="show_title">
-          内容
+          問題
         </div>
         <div class="show_content">
-        <%= @post.content %>
+          <%= @problem %>
         </div>
       </div>
-      <div class="show_box">
-        <div class="show_title">
-          投稿者
-        </div>
-        <div class="show_name">
-          <%= @post.user.name %>
-        </div>
+      <div class="show_btn">
+        <%= link_to "解答を見る", post_path(@post.id), class:"show_index_btn" %>
       </div>
-      <div class="show_box">
-        <div class="show_title">
-          投稿日
-        </div>
-        <div class="show_created" >
-          <%= l @post.created_at %>
-        </div>
-      </div>
-      <div id="like-btn", class="show_btn">
-        <%= render partial: "likes/like", locals: { post: @post} %>
-      </div>
-      <% if current_user == @post.user %>
-        <div class="show_btn">
-          <%= link_to '削除する', post_path, data: {turbo_method: :delete}, class:"show___btn" %>
-        </div>
-      <% end %>
       <div class="back_btn">
         <%= link_to "マイページに戻る", root_path, class:"show_index_btn" %>
       </div>
