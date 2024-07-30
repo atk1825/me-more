@@ -31,6 +31,12 @@ class PostsController < ApplicationController
     redirect_to root_path
   end
 
+  def problem
+    @post = Post.find(params[:id])
+    @client = OpenAI::Client.new(api: ENV['OPENAI_API_KEY'])
+    @problem = generate_problem(@post.content)
+  end
+
   private
 
   def post_params
