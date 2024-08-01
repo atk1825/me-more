@@ -16,9 +16,9 @@
 .second_title{
   height: 100%;
   font-size: 60px;
-  text-decoration: none;
-  color: #e1c188 ;
   font-weight: bold;
+  color: #e1c188 ;
+  text-decoration: none;
 }
 
 @media (max-width: 599px){

@@ -2,8 +2,8 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  color: #274176;
   font-weight: bold;
+  color: #274176;
   padding-top: 45px;
 }
 
@@ -12,21 +12,21 @@
 }
 
 .show_box{
+  width: 400px;
   display: flex;
   flex-direction: column;
-  width: 400px;
   padding-top: 18px;
 }
 
 .show__box{
+  width: 200px;
   display: flex;
   flex-direction: column;
-  width: 200px;
   margin-right: 3px;
 }
 .show_title{
-  font-size: large;
   background-color: #274176;
+  font-size: large;
   color: #e1c188;
   padding-left: 5px;
 }
@@ -36,10 +36,10 @@
   padding-left: 5px;
 }
 .show_content{
-  height: 250px;
-  width: 400px;
   overflow: scroll;
   overflow-wrap: break-word;
+  height: 250px;
+  width: 400px;
   padding: 0 5px;
 }
 .show_name{
@@ -55,13 +55,13 @@
 }
 
 .show___btn{
-  text-decoration: none;
   color: darkred;
+  text-decoration: none;
 }
 
 .post_likes{
-  text-decoration: none;
   color: #274176;
+  text-decoration: none;
 }
 
 /******
@@ -69,9 +69,9 @@ shared
 *******/
 
 .show_index_btn{
-  text-decoration: none;
-  color: #274176;
   font-weight: bold;
+  color: #274176;
+  text-decoration: none;
   margin-bottom: 100px;
 }
 
@@ -84,7 +84,7 @@ shared
   }
 
   .show_content{
-    width: 300px;
     height: 150px;
+    width: 300px;
   }
 }

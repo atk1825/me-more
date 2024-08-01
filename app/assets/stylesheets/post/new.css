@@ -9,10 +9,10 @@
 .form_title{
   display: flex;
   flex-direction: column;
-  margin-top: 20px;
-  color: #274176;
   font-size: 18px;
   font-weight: bold;
+  color: #274176;
+  margin-top: 20px;
   margin-bottom: 3px;
 }
 
@@ -24,10 +24,10 @@
 .form_content{
   display: flex;
   flex-direction: column;
-  margin-top: 20px;
-  color: #274176;
   font-size: 18px;
   font-weight: bold;
+  color: #274176;
+  margin-top: 20px;
 }
 
 .form__content{
@@ -39,10 +39,10 @@
 .form_genre{
   display: flex;
   flex-direction: column;
-  margin-top: 20px;
-  color: #274176;
   font-size: 18px;
   font-weight: bold;
+  color: #274176;
+  margin-top: 20px;
 }
 
 .genre-select{
@@ -54,10 +54,10 @@
 .form_btn{
   height: 40px;
   width: 100px;
-  margin-top: 40px;
-  color: #274176;
   font-size: 18px;
   font-weight: bold;
+  color: #274176;
+  margin-top: 40px;
 }
 /*スマホ表示*/
 

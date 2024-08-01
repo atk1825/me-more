@@ -9,8 +9,8 @@
   justify-content: center;
   align-items: center;
   font-size: 40px;
-  color: #274076;
   font-weight: bold;
+  color: #274076;
 }
 
 .icon_area{
@@ -23,9 +23,9 @@
 }
 .user_name{
   text-decoration: none;
-  color: #274076;
   font-size: 20px;
   font-weight: bold;
+  color: #274076;
 }
 
 .icon{
@@ -47,9 +47,9 @@
 
 .output__link{
   text-decoration: none;
-  color: #274076;
   font-size: 20px;
   font-weight: bold;
+  color: #274076;
 }
 
 .post_all{
@@ -61,15 +61,14 @@
   width: 25%;
   height: 300px;
   overflow: scroll;
-  margin: 0 15px;
   background-color: antiquewhite;
-
+  margin: 0 15px;
 }
 
 .h2{
   background-color: #274076;
-  color: #e1c188;
   font-size: large;
+  color: #e1c188;
   padding-left: 10px;
 }
 
@@ -79,8 +78,8 @@
 }
 
 .post_title{
-  text-decoration: none;
   overflow: scroll;
+  text-decoration: none;
 }
 
 .other_post{
@@ -90,8 +89,8 @@
 
 .others_post_title{
   background-color: #274076;
-  color: #e1c188;
   font-size: large;
+  color: #e1c188;
   padding-left: 10px;
 }
 

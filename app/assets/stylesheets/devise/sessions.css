@@ -16,9 +16,9 @@
 }
 
 .f_label{
-  color: #274176;
-  font-weight: bold;
   width: 100px;
+  font-weight: bold;
+  color: #274176;
 }
 
 .actions{
@@ -37,7 +37,7 @@
 }
 
 .devise_links{
-  text-decoration: none;
-  color: #274176;
   font-weight: bold;
+  color: #274176;
+  text-decoration: none;
 }

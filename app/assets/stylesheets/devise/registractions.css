@@ -3,16 +3,16 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding-top: 40px;
-  color: #274176;
   font-weight: bold;
+  color: #274176;
+  padding-top: 40px;
 }
 
 .edit_new_field{
+  width: 350px;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  width: 350px;
   padding-top: 10px;
 }
 
@@ -36,25 +36,25 @@
 }
 
 .edit__action{
-  width: 80px;
   height: 30px;
-  color: #274176;
-  font-weight: bold;
+  width: 80px;
   font-size: 15px;
+  font-weight: bold;
+  color: #274176;
   text-decoration: none;
 }
 
 .edit__action_delete{
-  width: 80px;
   height: 30px;
-  color: darkred;
-  font-weight: bold;
+  width: 80px;
   font-size: 15px;
+  font-weight: bold;
+  color: darkred;
   text-decoration: none;
 }
 
 .devise_h2{
   font-size: large;
-  color: #274176;
   font-weight: bold;
+  color: #274176;
 }
