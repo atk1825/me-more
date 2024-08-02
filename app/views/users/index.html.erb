@@ -23,7 +23,7 @@
 </div>
 <div class="post_all">
   <div class="post_area">
-    <div class="h2">今日の投稿</div>
+    <div class="h2">投稿一覧</div>
     <% @posts.each do |post|%>
       <div class="post_content">
         <%= link_to post.title, post_path(post.id), class:"post_title" %>
