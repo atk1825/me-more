@@ -20,8 +20,6 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
-    @client = OpenAI::Client.new(api: ENV['OPENAI_API_KEY'])
-    @problem = generate_problem(@post.content)
   end
 
   def destroy
