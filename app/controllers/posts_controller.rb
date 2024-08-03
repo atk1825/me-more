@@ -45,8 +45,9 @@ class PostsController < ApplicationController
     response = @client.chat(parameters: {
                               model: 'gpt-3.5-turbo',
                               messages: [
-                                { role: 'system', content: 'You are a helpful assistant.' },
-                                { role: 'user', content: "以下の内容が答えになるような問題を作成してください。ただし問題の答えは提示しないでください: #{content}" }
+                                { role: 'system', content: 'あなたは学校の先生です' },
+                                { role: 'user',
+                                  content: "以下の内容が答えになるような長文問題を記述形式で200文字以内で作成してください。ただし問題の答えは提示しないでください: #{content}" }
                               ],
                               max_tokens: 200
                             })
