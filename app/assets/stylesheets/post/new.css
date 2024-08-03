@@ -19,6 +19,7 @@
 .form__title{
   width: 300px;
   font-weight: normal;
+  padding: 0 3%;
 }
 
 .form_content{
@@ -34,6 +35,7 @@
   height: 340px;
   width: 300px;
   font-weight: normal;
+  padding: 0 3%;
 }
 
 .form_genre{
