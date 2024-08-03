@@ -1,5 +1,5 @@
 <%= render "shared/second_header"%>
-<div class="main">
+<div class="mains">
 <% other_posts = @posts.reject { |post| post.user_id == current_user.id } %>
 <% if other_posts.any? %>
   <div class="post_index_main">
