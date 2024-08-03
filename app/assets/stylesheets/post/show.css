@@ -21,10 +21,12 @@
 }
 
 .show__box{
+  width: 300px;
   display: flex;
   flex-direction: column;
   margin-right: 3px;
 }
+
 .show_title{
   background-color: #274176;
   font-size: large;
@@ -32,10 +34,10 @@
   padding-left: 5px;
 }
 
-
 .show__title{
   padding-left: 5px;
 }
+
 .show_content{
   overflow: scroll;
   overflow-wrap: break-word;
@@ -43,6 +45,7 @@
   width: 400px;
   padding: 0 5px;
 }
+
 .show_name{
   padding-left: 5px;
 }
@@ -86,6 +89,10 @@ shared
 
   .show_image{
     width: 300px;
+  }
+
+  .show__box{
+    width: 100px;
   }
 
   .show_content{
