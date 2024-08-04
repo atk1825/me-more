@@ -26,7 +26,7 @@
     <div class="h2">投稿一覧</div>
     <% @posts.each do |post|%>
       <div class="post_content">
-        <%= link_to post.title, post_path(post.id), class:"post_title" %>
+        <%= link_to post.title, problem_post_path(post.id), class:"post_title" %>
       </div>
     <% end %>
   </div>

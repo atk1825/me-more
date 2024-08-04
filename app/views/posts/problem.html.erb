@@ -2,28 +2,10 @@
 <div class="mains">
   <div class="show_main">
       <% if @post.image.attached?%>
-        <div class="show_image">
-          <div class="show__box">
-            <div class="show_title">
-            タイトル
-            </div>
-            <div class="show__title">
-            <%= @post.title%>
-            </div>
-          </div>
           <div>
             <%= image_tag @post.image.variant(resize: '200x200') %>
           </div>
-        </div>
       <% else %>
-        <div class="show_box">
-          <div class="show_title">
-            タイトル
-          </div>
-          <div class="show__title">
-            <%= @post.title%>
-          </div>
-        </div>
       <% end %>
       <div class="show_box">
         <div class="show_title">

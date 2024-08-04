@@ -45,11 +45,11 @@ class PostsController < ApplicationController
     response = @client.chat(parameters: {
                               model: 'gpt-3.5-turbo',
                               messages: [
-                                { role: 'system', content: 'あなたは学校の先生です' },
+                                { role: 'system', content: '現在記憶の定着のために勉強中です' },
                                 { role: 'user',
-                                  content: "以下の内容が答えになるような長文問題を記述形式で200文字以内で作成してください。ただし問題の答えは提示しないでください: #{content}" }
+                                  content: "以下の内容が答えになるように情報を２つ補足して問題を作ってください #{content}" }
                               ],
-                              max_tokens: 200
+                              max_tokens: 250
                             })
     if response['choices'] && response['choices'][0] && response['choices'][0]['message'] && response['choices'][0]['message']['content']
       response.dig('choices', 0, 'message', 'content').strip
