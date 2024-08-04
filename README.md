@@ -28,6 +28,7 @@ https://me-more.onrender.com/
 
 # 実装した機能についての画像やGIFおよびその説明
 
+
 # 実装予定の機能
 * 投稿機能に画像を添付できるようにする
 * プレビューもできるようにする
@@ -37,11 +38,27 @@ https://me-more.onrender.com/
 [![Image from Gyazo](https://i.gyazo.com/36c73673f2c9e1e22fd21badc06acfbe.png)](https://gyazo.com/36c73673f2c9e1e22fd21badc06acfbe)
 
 # 画面遷移図
-[![Image from Gyazo](https://i.gyazo.com/c32b246fee8ec6da2d17e20173811c57.png)](https://gyazo.com/c32b246fee8ec6da2d17e20173811c57)
+[![Image from Gyazo](https://gyazo.com/9cfa84f2a50d03bde014bcc9ca6a33d1)
 # 開発環境
+*フロントエンド
+*バックエンド
+*インフラ
+*テスト
+*テキストエディタ
+*タスク管理
+
 # ローカルでの動作方法
+以下のコマンドを順に実行
+% git clone https://github.com/atk1825/me-more
+% cd me-more
+% bundle install
+
 # 工夫したポイント
+*画面内に説明の文章を書くことなく直感的に扱えるようにした
+
 # 改善点
+*チャットGPTに問題を作成してもらう内容をより、パーソナライズ化する
+*配色が自分の好みのものにしたので、ユーザーの使いやすい配色にする
 # 製作時間
 
 
