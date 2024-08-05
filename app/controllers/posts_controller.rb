@@ -49,7 +49,7 @@ class PostsController < ApplicationController
                                 { role: 'user',
                                   content: "以下の内容が答えになるように情報を２つ補足して問題を作ってください #{content}" }
                               ],
-                              max_tokens: 250
+                              max_tokens: 500
                             })
     if response['choices'] && response['choices'][0] && response['choices'][0]['message'] && response['choices'][0]['message']['content']
       response.dig('choices', 0, 'message', 'content').strip
