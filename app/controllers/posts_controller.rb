@@ -18,6 +18,17 @@ class PostsController < ApplicationController
     end
   end
 
+  def edit
+  end
+
+  def update
+    if @post.update(post_params)
+      redirect_to post_pass(@post)
+    else
+      render action: :edit, status: unprocessable_entity
+    end
+  end
+
   def show
     @post = Post.find(params[:id])
   end
