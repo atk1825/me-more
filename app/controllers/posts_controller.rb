@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
   require 'openai'
   before_action :find_params, only: [:edit, :update, :show, :destroy, :problem]
+  before_action :move_to_index, only: [:edit, :update, :destroy]
 
   def index
     @posts = Post.all
@@ -48,6 +49,12 @@ class PostsController < ApplicationController
 
   def find_params
     @post = Post.find(params[:id])
+  end
+
+  def move_to_index
+    return if current_user.id == @post.user.id
+
+    redirect_to root_path
   end
 
   def post_params
