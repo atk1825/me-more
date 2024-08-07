@@ -1,5 +1,7 @@
 class PostsController < ApplicationController
   require 'openai'
+  before_action :find_params, only: [:edit, :update, :show, :destroy, :problem]
+  before_action :move_to_index, only: [:edit, :update, :destroy]
 
   def index
     @posts = Post.all
@@ -23,30 +25,37 @@ class PostsController < ApplicationController
 
   def update
     if @post.update(post_params)
-      redirect_to post_pass(@post)
+      redirect_to post_path(@post)
     else
       render action: :edit, status: unprocessable_entity
     end
   end
 
   def show
-    @post = Post.find(params[:id])
   end
 
   def destroy
-    @post = Post.find(params[:id])
     @post.likes.destroy_all
     @post.destroy
     redirect_to root_path
   end
 
   def problem
-    @post = Post.find(params[:id])
     @client = OpenAI::Client.new(api: ENV['OPENAI_API_KEY'])
     @problem = generate_problem(@post.content)
   end
 
   private
+
+  def find_params
+    @post = Post.find(params[:id])
+  end
+
+  def move_to_index
+    return if current_user.id == @post.user.id
+
+    redirect_to root_path
+  end
 
   def post_params
     params.require(:post).permit(:title, :content, :genre_id, :image).merge(user_id: current_user.id)

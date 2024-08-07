@@ -1,0 +1,21 @@
+<%= render "shared/second_header"%>
+<div class="main">
+  <%= form_with model: @post, local: true do |f| %>
+    <div class="post_page">
+      <label class="form_title">タイトル
+        <%= f.text_field :title, class: "form__title" %>
+      </label>
+      <label>
+        <%= f.file_field :image %>
+      </label>
+      <label class="form_content">内容
+        <%= f.text_area :content, class: "form__content"%>
+      </label>
+      <label class="form_genre">ジャンル
+        <%= f.collection_select(:genre_id, Genre.all, :id, :name, {}, {class:"genre-select"})%>
+      </label>
+        <%= f.submit '更新する', class: "form_btn" %>
+        <%= link_to '削除する', post_path, data: {turbo_method: :delete}, class:"show___btn" %>
+    </div>
+  <% end %>
+</div>

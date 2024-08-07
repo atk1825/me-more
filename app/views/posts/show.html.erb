@@ -54,7 +54,7 @@
       </div>
       <% if current_user == @post.user %>
         <div class="show_btn">
-          <%= link_to '削除する', post_path, data: {turbo_method: :delete}, class:"show___btn" %>
+          <%= link_to '編集する', edit_post_path,  class:"show_index_btn" %>
         </div>
       <% end %>
       <div class="back_btn">
