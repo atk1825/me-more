@@ -1,5 +1,5 @@
 <%= render "shared/header" %>
-<div class="main">
+<div class="mains">
   <div class="h1">MyPage</div>
       <% if user_signed_in?  %>
         <% if current_user.image.attached? %>
@@ -54,16 +54,4 @@
         </div>
       <% end %>
   </div>
-</div>
-<div class="other_post">
- <div class="others_post_title">保存した投稿</div>
-  <% if @like_posts.present? %>
-    <% @like_posts.each do |post|%>
-      <div class="other_post_contents">
-        <%= link_to post.title, post_path(post.id), class:"other_post_content" %>
-      </div>
-    <% end %>
-  <% else %>
-    <p>保存した投稿はありません</p>
-  <% end %>
 </div>
