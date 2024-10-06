@@ -3,7 +3,7 @@
   align-items: center;
   flex-direction: column;
   font-weight: bold;
-  color: #e1c188;
+  color: #274176;
   padding-top: 45px;
 }
 
@@ -28,9 +28,9 @@
 }
 
 .show_title{
-  background-color: #e1c188;
+  background-color: #274176;
   font-size: large;
-  color: #274176;
+  color: #e1c188;
   padding-left: 5px;
 }
 
