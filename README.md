@@ -38,7 +38,8 @@ https://me-more.onrender.com/
 [![Image from Gyazo](https://i.gyazo.com/36c73673f2c9e1e22fd21badc06acfbe.png)](https://gyazo.com/36c73673f2c9e1e22fd21badc06acfbe)
 
 # 画面遷移図
-[![Image from Gyazo]
+* ログイン画面
+[![Image from Gyazo][![Image from Gyazo](https://i.gyazo.com/2965976afaedb069355a55df9fe76ff5.png)](https://gyazo.com/2965976afaedb069355a55df9fe76ff5)
 
 # 開発環境
 * フロントエンド
