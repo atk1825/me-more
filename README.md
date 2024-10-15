@@ -38,6 +38,9 @@ https://me-more.onrender.com/
 [![Image from Gyazo](https://i.gyazo.com/36c73673f2c9e1e22fd21badc06acfbe.png)](https://gyazo.com/36c73673f2c9e1e22fd21badc06acfbe)
 
 # 画面遷移図
+* 新規登録画面
+[![Image from Gyazo](https://i.gyazo.com/f183dce0ea815307b1e658c3af101493.png)](https://gyazo.com/f183dce0ea815307b1e658c3af101493)
+
 * ログイン画面
 [![Image from Gyazo](https://i.gyazo.com/2965976afaedb069355a55df9fe76ff5.png)](https://gyazo.com/2965976afaedb069355a55df9fe76ff5)
 
